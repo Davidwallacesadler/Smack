@@ -11,6 +11,10 @@ import UIKit
 class ChannelVC: UIViewController {
 
     
+    //MARK: - Outlets
+    
+    //We want this label to update to the users name
+    @IBOutlet weak var loginButton: UIButton!
     
     
     
@@ -22,5 +26,11 @@ class ChannelVC: UIViewController {
 
     }
     
-
+    //MARK: - Actions
+    
+    
+    @IBAction func loginButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: TO_LOGIN, sender: nil)
+    }
+    
 }
